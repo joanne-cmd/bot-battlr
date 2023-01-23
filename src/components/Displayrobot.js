@@ -1,21 +1,10 @@
 import React from "react";
- function Displayrobot({robot, armies, setArmies, container,handleDel, setView, setBottodisplay}){
+ function Displayrobot({robot, armies, setArmies, container,handleDel, setView, setBottodisplay, setRobots,robots}){
 
     const {name, health, damage, armor, bot_class, catchphrase, avatar_url} = robot
 
     function handleclick(){
 
-        // let robotInArmies = false;
-
-        // for(let rob of armies) {
-        //     if(rob.id === robot.id) {
-        //         robotInArmies = true
-        //     } 
-        // }
-        
-        // if(robotInArmies === false) {
-        //     setArmies([...armies, robot])
-        // }
         if (container=== "collection-container"){
             setView("specs")
             setBottodisplay(robot)
@@ -24,6 +13,8 @@ import React from "react";
         else{
             // console.log(armies, container)
            setArmies (armies.filter(rob=>rob.id !== robot.id))
+
+           setRobots([ robot, ...robots])
         }
            
         //console.log(armies, container)

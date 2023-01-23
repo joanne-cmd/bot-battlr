@@ -8,6 +8,7 @@ function App() {
   const [armies, setArmies]=useState([])
   const [view, setView]=useState("collection")
   const[bottodisplay, setBottodisplay]= useState({})
+ 
   
   function deleteHelper(robotid){
     const remove= robots.filter((rob)=>{ 
@@ -27,8 +28,8 @@ function App() {
   },[])
   return (
     <div className="App">
-      <YourBotArmy handleDelete={deleteHelper} armies={armies} setArmies={setArmies}/>
-      {view==="collection"?<BotCollection armies={armies}  setArmies={setArmies} robots={robots} setRobots={setRobots} setView={setView} setBottodisplay={setBottodisplay}/>:<BotSpecs bot={bottodisplay} armies={armies} setArmies={setArmies} setView={setView}/>}
+      <YourBotArmy handleDelete={deleteHelper} armies={armies} setArmies={setArmies} setRobots={setRobots} robots={robots}/>
+      {view==="collection"?<BotCollection armies={armies}  setArmies={setArmies} robots={robots} setRobots={setRobots} setView={setView} setBottodisplay={setBottodisplay}/>:<BotSpecs bot={bottodisplay} armies={armies} setArmies={setArmies} setView={setView} setRobots={setRobots} robots={robots}/>}
       
     </div>
   );

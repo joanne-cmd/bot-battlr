@@ -1,5 +1,5 @@
  import React from "react";
- function BotSpecs ({bot ,armies, setArmies, setView}){
+ function BotSpecs ({bot ,armies, setArmies, setView,setRobots, robots}){
     const{name, health, damage, armor, bot_class, avatar_url, catchphrase, created_at, updated_at}=bot
     function handleGoBack(){
         setView("collection")
@@ -9,6 +9,9 @@
         if(!armies.find(rob => rob.id === bot.id)) {
                 setArmies([...armies, bot])
                 setView("collection")
+                setRobots(robots.filter((mybot)=>{
+                   return mybot.id!== bot.id
+                }))
             }
     }
     return(

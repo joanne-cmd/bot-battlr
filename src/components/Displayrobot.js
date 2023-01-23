@@ -1,5 +1,5 @@
 import React from "react";
- function Displayrobot({robot, armies, setArmies, container,handleDel}){
+ function Displayrobot({robot, armies, setArmies, container,handleDel, setView, setBottodisplay}){
 
     const {name, health, damage, armor, bot_class, catchphrase, avatar_url} = robot
 
@@ -17,9 +17,9 @@ import React from "react";
         //     setArmies([...armies, robot])
         // }
         if (container=== "collection-container"){
-            if(!armies.find(rob => rob.id === robot.id)) {
-                setArmies([...armies, robot])
-            }
+            setView("specs")
+            setBottodisplay(robot)
+
         }
         else{
             // console.log(armies, container)

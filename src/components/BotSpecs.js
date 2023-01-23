@@ -2,6 +2,7 @@
  function BotSpecs ({bot ,armies, setArmies, setView}){
     const{name, health, damage, armor, bot_class, avatar_url, catchphrase, created_at, updated_at}=bot
     function handleGoBack(){
+        setView("collection")
 
     }
     function handleEnlist(){

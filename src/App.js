@@ -8,6 +8,7 @@ function App() {
   const [armies, setArmies]=useState([])
   const [view, setView]=useState("collection")
   const[bottodisplay, setBottodisplay]= useState({})
+  
   function deleteHelper(robotid){
     const remove= robots.filter((rob)=>{ 
          return  rob.id !== robotid

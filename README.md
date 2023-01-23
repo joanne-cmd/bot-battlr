@@ -33,7 +33,7 @@
 >  open the web browers and  and cope and paste the live link.
 *****
 ## Live Link
-Or you can access the web application directly via this [LINK.](https://bank-of-flatiron-phi.vercel.app/)
+Or you can access the web application directly via this [LINK.](https://bot-battlr-gvow5oe77-joanne-cmd.vercel.app//)
 ***
 ## Dependencies
 -node
